@@ -229,39 +229,82 @@ HERO VIDEO SECTION - PERFECT CENTERING & FULL OVERLAY
   min-width: 24px;
 }
 
-/* MOBILE OPTIMIZATION */
+/* ===========================
+MOBILE HERO VIDEO FIX - FULL VISIBILITY
+============================ */
 @media (max-width: 768px) {
   #hero {
-    height: 85vh;
-    min-height: 450px;
+    height: 80vh; /* Reduced from 90vh - prevents excessive cropping */
+    min-height: 400px; /* Reduced from 500px - fits mobile screens */
   }
   
+  .hero-video {
+    /* CRITICAL FIX: Adjust vertical positioning for mobile */
+    transform: translate(-50%, -55%); /* Was -50% - shifts video UP slightly */
+    min-height: 110%; /* Ensures full vertical coverage */
+  }
+  
+  /* DARKER OVERLAY FOR BETTER MOBILE READABILITY */
+  .hero-overlay-bg {
+    background: rgba(0, 0, 0, 0.92); /* Slightly darker for small screens */
+  }
+  
+  /* OPTIMIZE TEXT FOR MOBILE */
   .hero-overlay h1 {
-    font-size: clamp(2.2rem, 8vw, 3.2rem);
-    margin-bottom: 1.2rem;
-    letter-spacing: 1px;
+    font-size: clamp(2rem, 8vw, 2.8rem); /* Smaller max size */
+    margin-bottom: 1rem;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
   }
   
   .hero-overlay .lead {
-    font-size: clamp(1.25rem, 4vw, 1.6rem);
-    margin-bottom: 2rem;
-    padding: 0 10px;
+    font-size: clamp(1.15rem, 4.5vw, 1.6rem);
+    margin-bottom: 1.8rem;
+    padding: 0 15px;
+    max-width: 100%;
   }
   
   .hero-btn {
-    padding: 16px 45px;
-    font-size: clamp(1.1rem, 3vw, 1.25rem);
-    width: 100%;
-    max-width: 380px;
-    justify-content: center;
+    padding: 14px 35px;
+    font-size: clamp(1.05rem, 3.5vw, 1.25rem);
+    width: 90%;
+    max-width: 350px;
   }
   
-  .hero-overlay > div {
-    max-width: 100%;
-    padding: 0 15px;
+  /* PREVENT CONTENT FROM BEING CUT OFF AT BOTTOM */
+  .hero-overlay {
+    padding-bottom: 30px; /* Extra space for button */
   }
 }
 
+/* ULTRA-MOBILE (SMALL PHONES) */
+@media (max-width: 480px) {
+  #hero {
+    height: 75vh;
+    min-height: 350px;
+  }
+  
+  .hero-video {
+    transform: translate(-50%, -58%); /* Shift video UP more for small screens */
+    min-height: 115%;
+  }
+  
+  .hero-overlay h1 {
+    font-size: clamp(1.8rem, 9vw, 2.4rem);
+    margin-bottom: 0.8rem;
+  }
+  
+  .hero-overlay .lead {
+    font-size: clamp(1.1rem, 5vw, 1.4rem);
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-btn {
+    padding: 12px 30px;
+    font-size: clamp(1rem, 4vw, 1.15rem);
+    width: 95%;
+  }
+}
  /* ===========================
 /* ===========================
 SECTION DIVIDER - MASRAM LOGO WATERMARK
@@ -1053,4 +1096,5 @@ SECTION DIVIDER - MASRAM LOGO WATERMARK
 </script>
 
 </body>
+
 </html>
