@@ -929,6 +929,14 @@
         <h2>Stay Updated</h2>
         <p class="lead">Subscribe to our newsletter for exclusive event updates and offers</p>
         
+        <!-- NEWSLETTER SECTION -->
+<section id="newsletter">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center">
+        <h2>Stay Updated</h2>
+        <p class="lead">Subscribe to our newsletter for exclusive event updates and offers</p>
+        
         <!-- NEWSLETTER FORM - NO ACTION/METHOD (HANDLED BY JS) -->
         <form id="newsletterForm" class="d-flex gap-3 flex-wrap justify-content-center">
           <input type="hidden" name="access_key" value="5b9e679f-9112-467a-8ef8-3ac3efa8909e">
@@ -953,7 +961,7 @@
           You may unsubscribe at any time.
         </small>
         <small class="text-muted d-block mt-1" style="font-size:0.85rem; opacity:0.7;">
-          Masram Group • Emalahleni, Mpumalanga, South Africa
+          Masram Group • Rustenburg, North West Province, South Africa
         </small>
       </div>
     </div>
@@ -1060,7 +1068,7 @@
         newsletterSubmitBtn.disabled = true;
 
         try {
-            const response = await fetch("https://api.web3forms.com/submit", {
+const response = await fetch("https://api.web3forms.com/submit", {
                 method: "POST",
                 body: formData
             });
@@ -1086,4 +1094,5 @@
 
 </body>
 </html>
+
 
