@@ -103,36 +103,36 @@
       padding: 0.25rem 0.75rem;
     }
     .navbar-toggler-icon {
-      background-image: url("image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28212, 175, 55, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28212, 175, 55, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
     }
 
    /* ===========================
-SECTION DIVIDER - MASRAM LOGO WATERMARK
-============================ */
-.section-divider {
-  width: 100%;
-  height: 4px;
-  background: var(--gold-gradient);
-  margin: 70px 0;
-  position: relative;
-  border-radius: 2px;
-  box-shadow: 0 2px 15px rgba(212, 175, 55, 0.25);
-}
+    SECTION DIVIDER - MASRAM LOGO WATERMARK
+    ============================ */
+    .section-divider {
+      width: 100%;
+      height: 4px;
+      background: var(--gold-gradient);
+      margin: 70px 0;
+      position: relative;
+      border-radius: 2px;
+      box-shadow: 0 2px 15px rgba(212, 175, 55, 0.25);
+    }
 
-/* MASRAM LOGO WATERMARK - Centered on divider */
-.section-divider::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 50px; /* Adjust size as needed */
-  height: 50px;
-  background: url('images/monogram.png') center/contain no-repeat;
-  opacity: 0.9;
-  z-index: 2;
-  filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.5));
-}
+    /* MASRAM LOGO WATERMARK - Centered on divider */
+    .section-divider::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 50px;
+      height: 50px;
+      background: url('images/monogram.png') center/contain no-repeat;
+      opacity: 0.9;
+      z-index: 2;
+      filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.5));
+    }
 
     /* ===========================
     EVENTS SECTION
@@ -267,56 +267,6 @@ SECTION DIVIDER - MASRAM LOGO WATERMARK
     }
     .event-card button:hover::before {
       opacity: 1;
-    }
-
-    /* ===========================
-    KEYNOTE SPEAKER SECTION
-    ============================ */
-    .keynote-section {
-      padding: 5rem 0;
-      background: linear-gradient(135deg, #000, #0a0a0a);
-    }
-    .keynote-section h2 {
-      text-align: center;
-      font-weight: 800;
-      font-size: clamp(2rem, 4vw, 3rem);
-      margin-bottom: 3rem;
-      color: var(--gold);
-      position: relative;
-      display: inline-block;
-    }
-    .keynote-section h2::after {
-      content: '';
-      position: absolute;
-      bottom: -15px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 80px;
-      height: 4px;
-      background: var(--gold);
-      border-radius: 2px;
-    }
-    .keynote-image {
-      height: 280px;
-      width: auto;
-      max-width: 100%;
-      object-fit: cover;
-      border: 3px solid var(--gold);
-      border-radius: 20px;
-      box-shadow: var(--gold-glow);
-      cursor: pointer;
-      transition: all 0.4s ease;
-    }
-    .keynote-image:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 30px rgba(212, 175, 55, 0.8);
-    }
-    .keynote-description {
-      font-size: 1.2rem;
-      line-height: 1.8;
-      opacity: 0.95;
-      font-style: italic;
-      margin-top: 1.5rem;
     }
 
     /* ===========================
@@ -654,9 +604,6 @@ SECTION DIVIDER - MASRAM LOGO WATERMARK
       .event-card h3 {
         font-size: 1.5rem;
       }
-      .keynote-image {
-        height: 200px;
-      }
       .speaker-card, .moderator-card {
         margin-bottom: 20px;
       }
@@ -702,41 +649,17 @@ SECTION DIVIDER - MASRAM LOGO WATERMARK
     <div class="row g-4 mt-3">
       <!-- International Women's Day Conference -->
       <div class="col-md-12 fade-in" style="animation-delay: 0.2s;">
-        <div class="event-card" onclick="openPopup('images/events/event.webp')">
-          <img src="images/events/event.webp" alt="International Women's Day Conference">
+        <div class="event-card" onclick="openPopup('images/events/event.jpeg')">
+          <img src="images/events/event.jpeg" alt="International Women's Day Conference">
           <div class="p-4 btn-wrapper">
             <h3>International Women's Day Conference</h3>
-            <p><strong>Date:</strong> 06 March 2026</p>
+            <p><strong>Date:</strong> 07 March 2026</p>
             <p><strong>Venue:</strong> Bon Hotel Rustenburg</p>
             <p>Join us for an empowering and inspiring day as we celebrate women's achievements, leadership, and resilience during this prestigious International Women's Day Conference hosted by Masram Group.</p>
             <button onclick="event.stopPropagation(); window.open('https://selar.com/t11k39978o','_blank')">
               <i class="fas fa-calendar-check me-2"></i>Register Now
             </button>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="section-divider"></div>
-
-<!-- KEYNOTE SPEAKER SECTION -->
-<section class="keynote-section">
-  <div class="container">
-    <h2 class="fade-in">Keynote Speaker</h2>
-    <div class="row justify-content-center mt-3">
-      <div class="col-md-8 col-lg-6 text-center fade-in" style="animation-delay: 0.3s;">
-        <img 
-          src="images/events/keynote-speaker.jpg" 
-          alt="Keynote Speaker" 
-          class="keynote-image"
-          onclick="openPopup('images/events/keynote-speaker.jpg')"
-        >
-        <div class="mt-4 px-3">
-          <p class="keynote-description">
-            A great South African woman, a leader who believes and advocates for science and education.
-          </p>
         </div>
       </div>
     </div>
