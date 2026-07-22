@@ -1,0 +1,61 @@
+# =====================================================
+# robots.txt for Masram
+# Domain: https://masram.co.za
+# Location: Root directory (/public_html/ or /www/)
+# Last Updated: 2026-04-28
+# =====================================================
+
+# Allow all crawlers to index public content
+User-agent: *
+Allow: /
+
+# Block access to development, system, and sensitive files
+Disallow: /.git/
+Disallow: /.env
+Disallow: /config/
+Disallow: /temp/
+Disallow: /node_modules/
+Disallow: /vendor/
+Disallow: /backup/
+Disallow: /*.log$
+Disallow: /wp-admin/          # If WordPress is ever added
+Disallow: /wp-includes/       # If WordPress is ever added
+
+# Block crawling of admin/private HTML pages (if any)
+Disallow: /admin.html
+Disallow: /dashboard.html
+
+# Allow important assets for rendering & SEO
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Allow: /fonts/
+
+# Crawl-delay for respectful bot behavior (optional)
+# Crawl-delay: 10
+
+# =====================================================
+# SITEMAP REFERENCE (CRITICAL FOR INDEXING)
+# =====================================================
+Sitemap: https://masram.co.za/sitemap.xml
+
+# =====================================================
+# ADDITIONAL SEARCH ENGINE DIRECTIVES (Optional)
+# =====================================================
+# Googlebot-specific rules (uncomment to customize)
+# User-agent: Googlebot
+# Allow: /
+# Crawl-delay: 5
+
+# Bingbot-specific rules (uncomment to customize)
+# User-agent: Bingbot
+# Allow: /
+# Crawl-delay: 10
+
+# Block AI scrapers if desired (optional)
+# User-agent: GPTBot
+# Disallow: /
+# User-agent: ChatGPT-User
+# Disallow: /
+# User-agent: CCBot
+# Disallow: /
